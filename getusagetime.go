@@ -15,7 +15,7 @@ func main() {
 	output := strings.Split(string(o),"\n")
 	// give the AC unplug date and time manually
 	// yeah, but works for me.
-	txt := "2025-11-26 21:40:00 +0300"
+	txt := "2025-11-28 22:11:00 +0300"
 	// this date is spesifically selected by golang developers.
 	// used for date template
 	layout := "2006-01-02 15:04:05 -0700"
