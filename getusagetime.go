@@ -13,8 +13,7 @@ func main() {
 	o, _ := cmd.Output()
 	// output is []string
 	output := strings.Split(string(o), "\n")
-	// give the AC unplug date and time manually
-	// yeah, but works for me.
+	// expected input for the moment ac -> batt change happened
 	//txt := "2025-12-25 22:13:00 +0300"
 	shellCommand2 := `pmset -g log | awk '/Using AC/ {last_was_ac=1} /Using (Batt|Battery)/ {if(last_was_ac) {print $0; last_was_ac=0}}' | tail -n 1`
 	cmd2 := exec.Command("bash", "-c", shellCommand2)
