@@ -2,7 +2,7 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - main: ./getusagedata.go # Ana dosyanın adı
+  - main: ./getusagedata.go
     id: "getusagedata"
     binary: getusagedata
     env:

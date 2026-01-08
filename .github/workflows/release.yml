@@ -3,10 +3,10 @@ name: Release
 on:
   push:
     tags:
-      - 'v*' # Sadece v1.0.0 gibi etiket atınca çalışır
+      - 'v*'
 
 permissions:
-  contents: write # Release oluşturabilmek için bu izin şart
+  contents: write
 
 jobs:
   release:
@@ -23,6 +23,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            getusagedata.go # Buraya istersen build aldığın dosyayı yazabilirsin
+            ./getusagedata.go
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
