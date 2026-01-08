@@ -3,6 +3,8 @@ before:
     - go mod tidy
 builds:
   - main: ./getusagedata.go # Ana dosyanın adı
+    id: "getusagedata"
+    binary: getusagedata
     env:
       - CGO_ENABLED=0
     goos:
